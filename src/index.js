@@ -28,6 +28,19 @@ class App extends Component {
     }
 
 
+    componentDidMount(){
+        window.addEventListener('mousemove', this.onMouseMove)
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('mousemove', this.onMouseMove)
+    }
+
+    onMouseMove = (e) => {
+        this.setState({ x: e.clientX - 25, y: e.clientY -25 });
+    }
+
+
     render(){
         const { x, y } = this.state;
         return (
