@@ -46,16 +46,16 @@ class App extends Component {
     changeColor = () => {
         const {setNewColor } = this.props;
         const randomColor = `#${Math.floor(Math.random()* 16777215).toString(16)}`;
-        store.dispatch(setNewColor(randomColor));
-        //setNewColor(randomColor);
+        //store.dispatch(setNewColor(randomColor));
+        setNewColor(randomColor);
     }
 
     onMouseMove = (e) => {
         console.log(this.props);
        // const { setMousePosition } = this.props;
         //this.setState({ x: e.clientX - 25, y: e.clientY -25 });
-        store.dispatch(setMousePosition({ x: e.clientX - 25, y: e.clientY -25 }))
-       // setMousePosition({ x: e.clientX - 25, y: e.clientY -25 })
+       // store.dispatch(setMousePosition({ x: e.clientX - 25, y: e.clientY -25 }))
+        setMousePosition({ x: e.clientX - 25, y: e.clientY -25 })
     }
 
 
