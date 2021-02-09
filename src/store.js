@@ -4,4 +4,4 @@ import { myReducer } from './reducers';
 
 export const store = createStore(myReducer)
 
-console.log(store.dispatch);
+// console.log(store.dispatch);
